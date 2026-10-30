@@ -1,0 +1,31 @@
+task_id,task,version,accuracy,completeness,fit,usability,clarity,total,comment
+1,Explain EKKO and EKPO to a new joiner,Lazy,5,3,2,3,4,17,"Correct but generic, not aimed at a new joiner, no example or SE16N help"
+1,Explain EKKO and EKPO to a new joiner,6-block,5,4,4,4,5,22,"Clear field tables for beginners, no worked example"
+1,Explain EKKO and EKPO to a new joiner,Improved,5,5,5,5,4,24,"Worked example and SE16N steps make it usable, slightly longer"
+2,5 test cases for PO approval,Lazy,4,3,2,2,4,15,"Generic workflow cases, no SAP transactions, data or steps"
+2,5 test cases for PO approval,6-block,5,4,5,5,4,23,"Runnable SAP cases, misses boundary value and change after release"
+2,5 test cases for PO approval,Improved,5,5,5,5,4,24,"Covers boundary 10,000.00 and release reset after change"
+3,Email: transport delayed by 1 day,Lazy,4,3,2,3,4,16,"Placeholder email, no date, reason or reader in mind"
+3,Email: transport delayed by 1 day,6-block,5,5,5,4,5,24,"Clear and calm, does not say what the team must do meanwhile"
+3,Email: transport delayed by 1 day,Improved,5,5,5,5,4,24,"Adds action for the team and contact, same total as 6-block"
+4,Explain a real ST22 dump,Lazy,4,2,1,1,4,12,"No dump given, invented a TIME_OUT example instead of the real one"
+4,Explain a real ST22 dump,6-block,4,4,5,4,5,22,"Correct diagnosis, fix breaks on thousand separators like 1.250,50"
+4,Explain a real ST22 dump,Improved,4,5,5,5,4,23,"Handles thousand separators and logs bad lines, still assumes German format"
+5,Functional spec section: vendor block,Lazy,4,3,2,3,4,16,"Generic text, no testable rules or messages"
+5,Functional spec section: vendor block,6-block,5,4,5,4,5,23,"Testable rules, correctly leaves purchasing block to standard"
+5,Functional spec section: vendor block,Improved,5,5,5,4,3,22,"More complete but long and overloaded, prompt asked for too much"
+6,Summarize a long support ticket,Lazy,3,1,1,1,4,10,"No ticket provided, answer only asks for input"
+6,Summarize a long support ticket,6-block,5,4,4,5,5,23,"Accurate and short, deadline and decision not prominent"
+6,Summarize a long support ticket,Improved,5,5,5,5,4,24,"Leads with deadline and decision needed, manager can act at once"
+7,Business rule to ABAP pseudo-code,Lazy,3,3,3,3,4,16,"Guessed 30 days for new vendor, no currency handling, mixes real code"
+7,Business rule to ABAP pseudo-code,6-block,5,4,5,4,5,23,"Correct pseudo-code with currency conversion, edge cases missing"
+7,Business rule to ABAP pseudo-code,Improved,5,5,5,5,4,24,"Edge cases, test table, notes standard already covers purchasing block"
+8,10 test vendors as JSON,Lazy,4,3,2,3,4,16,"Valid JSON but not SAP fields, no blocks or company code data"
+8,10 test vendors as JSON,6-block,5,5,5,5,4,24,"All constraints met: country mix, blocks, fake VAT IDs"
+8,10 test vendors as JSON,Improved,5,5,5,5,4,24,"Identical output, added format rules were already met"
+9,Explain a CDS view in simple English,Lazy,5,3,2,3,5,18,"Explained CDS views in general, not the specific view"
+9,Explain a CDS view in simple English,6-block,5,4,5,4,5,23,Clear line-by-line table for an analyst
+9,Explain a CDS view in simple English,Improved,5,5,5,5,4,24,Example rows and limits answer the real business question
+10,Release notes for a Fiori app,Lazy,2,2,2,2,4,12,Invented features and version number
+10,Release notes for a Fiori app,6-block,5,5,5,4,5,24,"Accurate, user-focused, short"
+10,Release notes for a Fiori app,Improved,5,5,5,5,5,25,Action-needed line removes the only open question for users
