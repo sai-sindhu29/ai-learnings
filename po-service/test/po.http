@@ -1,0 +1,41 @@
+### Variables: start the server with `cds watch` first (port 4004)
+@host = http://localhost:4004
+@base = {{host}}/odata/v4/po
+
+### 1. All POs
+GET {{base}}/PurchaseOrders
+
+### 2. Late POs (dueDate before 2026-11-03 AND not fully delivered)
+GET {{base}}/PurchaseOrders?$filter=dueDate%20lt%202026-11-03%20and%20deliveredQty%20lt%20orderedQty&$expand=vendor
+
+### 3. Sorted by due date
+GET {{base}}/PurchaseOrders?$orderby=dueDate
+
+### 4. With vendor details
+GET {{base}}/PurchaseOrders?$expand=vendor
+
+### 5. Create PO with amount 0 (expect 400)
+POST {{base}}/PurchaseOrders
+Content-Type: application/json
+
+{
+  "poNumber": "4500020",
+  "vendor_ID": "V001",
+  "dueDate": "2026-12-01",
+  "orderedQty": 10,
+  "deliveredQty": 0,
+  "amount": 0
+}
+
+### 6. Create a valid PO (expect 201)
+POST {{base}}/PurchaseOrders
+Content-Type: application/json
+
+{
+  "poNumber": "4500020",
+  "vendor_ID": "V001",
+  "dueDate": "2026-12-01",
+  "orderedQty": 10,
+  "deliveredQty": 0,
+  "amount": 50000.00
+}
