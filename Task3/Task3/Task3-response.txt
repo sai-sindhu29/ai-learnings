@@ -1,0 +1,376 @@
+
+===================================
+       TASK 3 - GUARDRAILS
+       STAGE 1 - AUDIT LOG
+===================================
+[AUDIT] SUCCESS find_late_pos
+[AUDIT] SUCCESS get_vendor_details
+[AUDIT] REFUSED send_email
+
+Stage 1 completed.
+Audit file: audit.jsonl
+===================================
+       TASK 3 - GUARDRAILS
+       STAGE 2 - READ ONLY
+===================================
+
+[TOOL REQUESTED] find_late_pos
+[AUDIT] SUCCESS find_late_pos
+
+RESULT 1:
+{
+  "success": true,
+  "status": "SUCCESS",
+  "result": {
+    "message": "Late purchase orders retrieved",
+    "total": 5
+  }
+}
+
+[TOOL REQUESTED] get_vendor_details
+[AUDIT] SUCCESS get_vendor_details
+
+RESULT 2:
+{
+  "success": true,
+  "status": "SUCCESS",
+  "result": {
+    "po_id": "4500011",
+    "vendor": "V001",
+    "message": "Vendor details retrieved"
+  }
+}
+
+[TOOL REQUESTED] send_email
+[GUARDRAIL] REFUSED
+[REASON] Security policy violation: Only read-only tools are permitted.
+[AUDIT] REFUSED send_email
+
+RESULT 3:
+{
+  "success": false,
+  "status": "REFUSED",
+  "reason": "Security policy violation: Only read-only tools are permitted."
+}
+
+===================================
+STAGE 2 TEST COMPLETED
+===================================
+PS C:\Users\sindh\AppData\Local\Programs\Python\Python314> notepad guardrails.py
+PS C:\Users\sindh\AppData\Local\Programs\Python\Python314> .\python.exe guardrails.py
+
+===================================
+       TASK 3 - GUARDRAILS
+       STAGE 2 - READ ONLY
+===================================
+
+[TOOL REQUESTED] find_late_pos
+[AUDIT] SUCCESS find_late_pos
+
+RESULT 1:
+{
+  "success": true,
+  "status": "SUCCESS",
+  "result": {
+    "message": "Late purchase orders retrieved",
+    "total": 5
+  }
+}
+
+[TOOL REQUESTED] get_vendor_details
+[AUDIT] SUCCESS get_vendor_details
+
+RESULT 2:
+{
+  "success": true,
+  "status": "SUCCESS",
+  "result": {
+    "po_id": "4500011",
+    "vendor": "V001",
+    "message": "Vendor details retrieved"
+  }
+}
+
+[TOOL REQUESTED] send_email
+[GUARDRAIL] REFUSED
+[REASON] Security policy violation: Only read-only tools are permitted.
+[AUDIT] REFUSED send_email
+
+RESULT 3:
+{
+  "success": false,
+  "status": "REFUSED",
+  "reason": "Security policy violation: Only read-only tools are permitted."
+}
+
+===================================
+STAGE 2 TEST COMPLETED
+===================================
+PS C:\Users\sindh\AppData\Local\Programs\Python\Python314> notepad guardrails.py
+PS C:\Users\sindh\AppData\Local\Programs\Python\Python314> .\python.exe guardrails.py
+
+===================================
+       TASK 3 - GUARDRAILS
+       STAGE 3 - HUMAN APPROVAL
+===================================
+
+[TOOL REQUESTED] find_late_pos
+[AUDIT] SUCCESS find_late_pos
+
+RESULT 1:
+{
+  "status": "SUCCESS",
+  "result": {
+    "message": "Late purchase orders retrieved",
+    "total": 5
+  }
+}
+
+[TOOL REQUESTED] send_email
+
+===================================
+       HUMAN APPROVAL REQUIRED
+===================================
+Requested action: send_email
+Action details: {'vendor': 'V001', 'subject': 'Follow-up on overdue POs'}
+
+Do you approve this action? (y/n): y
+[AUDIT] APPROVED_BUT_BLOCKED send_email
+
+[HUMAN DECISION] APPROVED
+[SECURITY] ACTION BLOCKED
+Reason: Read-only policy is still active.
+
+RESULT 2:
+{
+  "status": "APPROVED_BUT_BLOCKED",
+  "reason": "Read-only policy prohibits sending emails."
+}
+
+===================================
+STAGE 3 TEST COMPLETED
+===================================
+PS C:\Users\sindh\AppData\Local\Programs\Python\Python314> .\python.exe guardrails.py
+
+===================================
+       TASK 3 - GUARDRAILS
+       STAGE 3 - HUMAN APPROVAL
+===================================
+
+[TOOL REQUESTED] find_late_pos
+[AUDIT] SUCCESS find_late_pos
+
+RESULT 1:
+{
+  "status": "SUCCESS",
+  "result": {
+    "message": "Late purchase orders retrieved",
+    "total": 5
+  }
+}
+
+[TOOL REQUESTED] send_email
+
+===================================
+       HUMAN APPROVAL REQUIRED
+===================================
+Requested action: send_email
+Action details: {'vendor': 'V001', 'subject': 'Follow-up on overdue POs'}
+
+Do you approve this action? (y/n): n
+[AUDIT] REFUSED send_email
+
+[HUMAN DECISION] REFUSED
+
+RESULT 2:
+{
+  "status": "REFUSED",
+  "reason": "Human rejected the request."
+}
+
+===================================
+STAGE 3 TEST COMPLETED
+===================================
+PS C:\Users\sindh\AppData\Local\Programs\Python\Python314> notepad guardrails1.py
+PS C:\Users\sindh\AppData\Local\Programs\Python\Python314> .\python.exe guardrails1.py
+
+===================================
+       TASK 3 - GUARDRAILS
+       STAGE 4 - OFFLINE AGENT
+===================================
+
+========== STEP 1 ==========
+
+[TOOL REQUESTED] find_late_pos
+[INPUT] {}
+[AUDIT] SUCCESS find_late_pos
+
+LATE PURCHASE ORDERS:
+[
+  {
+    "poNumber": "4500011",
+    "vendor_ID": "V001",
+    "dueDate": "2026-10-20",
+    "orderedQty": 100,
+    "deliveredQty": 60,
+    "pendingQty": 40,
+    "amount": 420000,
+    "daysOverdue": 31
+  },
+  {
+    "poNumber": "4500012",
+    "vendor_ID": "V001",
+    "dueDate": "2026-10-20",
+    "orderedQty": 100,
+    "deliveredQty": 60,
+    "pendingQty": 40,
+    "amount": 420000,
+    "daysOverdue": 31
+  },
+  {
+    "poNumber": "4500014",
+    "vendor_ID": "V003",
+    "dueDate": "2026-10-20",
+    "orderedQty": 50,
+    "deliveredQty": 0,
+    "pendingQty": 50,
+    "amount": 130000,
+    "daysOverdue": 31
+  },
+  {
+    "poNumber": "4500015",
+    "vendor_ID": "V002",
+    "dueDate": "2026-09-15",
+    "orderedQty": 80,
+    "deliveredQty": 30,
+    "pendingQty": 50,
+    "amount": 148000,
+    "daysOverdue": 66
+  },
+  {
+    "poNumber": "4500016",
+    "vendor_ID": "V001",
+    "dueDate": "2026-10-25",
+    "orderedQty": 120,
+    "deliveredQty": 70,
+    "pendingQty": 50,
+    "amount": 372000,
+    "daysOverdue": 26
+  }
+]
+Total late POs: 5
+
+========== STEP 2 ==========
+
+[TOOL REQUESTED] get_vendor_details
+[INPUT] {'po_id': '4500011'}
+[AUDIT] SUCCESS get_vendor_details
+
+PO processed: 4500011
+Vendor: V001
+
+========== STEP 3 ==========
+
+[TOOL REQUESTED] get_vendor_details
+[INPUT] {'po_id': '4500012'}
+[AUDIT] SUCCESS get_vendor_details
+
+PO processed: 4500012
+Vendor: V001
+
+========== STEP 4 ==========
+
+[TOOL REQUESTED] get_vendor_details
+[INPUT] {'po_id': '4500014'}
+[AUDIT] SUCCESS get_vendor_details
+
+PO processed: 4500014
+Vendor: V003
+
+========== STEP 5 ==========
+
+[TOOL REQUESTED] get_vendor_details
+[INPUT] {'po_id': '4500015'}
+[AUDIT] SUCCESS get_vendor_details
+
+PO processed: 4500015
+Vendor: V002
+
+========== STEP 6 ==========
+
+[TOOL REQUESTED] get_vendor_details
+[INPUT] {'po_id': '4500016'}
+[AUDIT] SUCCESS get_vendor_details
+
+PO processed: 4500016
+Vendor: V001
+
+========== STEP 7 ==========
+All late POs processed.
+No more read-only tasks available.
+
+===================================
+       HUMAN APPROVAL PHASE
+===================================
+
+[TOOL REQUESTED] send_email
+[INPUT] {'vendor_id': 'V001', 'po_numbers': ['4500011', '4500012', '4500016'], 'subject': 'Overdue PO Follow-up - V001'}
+
+===================================
+       HUMAN APPROVAL REQUIRED
+===================================
+Vendor: V001
+Purchase Orders: ['4500011', '4500012', '4500016']
+Do you approve this email? (y/n): n
+
+[HUMAN DECISION] REFUSED
+[AUDIT] REFUSED send_email
+
+[TOOL REQUESTED] send_email
+[INPUT] {'vendor_id': 'V003', 'po_numbers': ['4500014'], 'subject': 'Overdue PO Follow-up - V003'}
+
+===================================
+       HUMAN APPROVAL REQUIRED
+===================================
+Vendor: V003
+Purchase Orders: ['4500014']
+Do you approve this email? (y/n): y
+
+[HUMAN DECISION] APPROVED
+[SECURITY] ACTION BLOCKED
+Reason: Read-only policy is active.
+[AUDIT] APPROVED_BUT_BLOCKED send_email
+
+[TOOL REQUESTED] send_email
+[INPUT] {'vendor_id': 'V002', 'po_numbers': ['4500015'], 'subject': 'Overdue PO Follow-up - V002'}
+
+===================================
+       HUMAN APPROVAL REQUIRED
+===================================
+Vendor: V002
+Purchase Orders: ['4500015']
+Do you approve this email? (y/n): n
+
+[HUMAN DECISION] REFUSED
+[AUDIT] REFUSED send_email
+
+===================================
+          FINAL RESULT
+===================================
+Total late POs: 5
+Processed POs: 5
+Total vendors: 3
+
+VENDOR-WISE SUMMARY:
+V001 -> 3 late POs
+V003 -> 1 late POs
+V002 -> 1 late POs
+
+APPROVAL SUMMARY:
+{'status': 'REFUSED', 'reason': 'Human rejected the request.'}
+{'status': 'APPROVED_BUT_BLOCKED', 'reason': 'Read-only policy prohibits sending.'}
+{'status': 'REFUSED', 'reason': 'Human rejected the request.'}
+
+Audit file: audit.jsonl
+Read-only policy remains active.
+No emails were sent.
