@@ -1,0 +1,126 @@
+PS C:\Users\sindh\AppData\Local\Programs\Python\Python314> notepad pos.py
+PS C:\Users\sindh\AppData\Local\Programs\Python\Python314> .\python.exe pos.py
+==================================================
+   SAP PURCHASE ORDER AI AGENT (DYNAMIC)
+==================================================
+Type your questions below (type 'exit' to quit).
+
+You: Show me the material breakdown and quantities for PO 4500000004.
+
+[AI Agent] Intent: List PO Items -> Calling `list_po_items('4500000004')`
+{
+  "po_number": "4500000004",
+  "items": [
+    {
+      "item": 1,
+      "material": "MZ-RM-M550-01",
+      "order_quantity": 35
+    },
+    {
+      "item": 2,
+      "material": "MZ-RM-M550-02",
+      "order_quantity": 35
+    },
+    {
+      "item": 3,
+      "material": "MZ-RM-M550-03",
+      "order_quantity": 35
+    },
+    {
+      "item": 4,
+      "material": "MZ-RM-M550-04",
+      "order_quantity": 70
+    },
+    {
+      "item": 5,
+      "material": "MZ-RM-M550-05",
+      "order_quantity": 35
+    },
+    {
+      "item": 6,
+      "material": "MZ-RM-M550-06",
+      "order_quantity": 35
+    },
+    {
+      "item": 7,
+      "material": "MZ-RM-M550-07",
+      "order_quantity": 35
+    },
+    {
+      "item": 8,
+      "material": "MZ-RM-M550-08",
+      "order_quantity": 35
+    },
+    {
+      "item": 9,
+      "material": "MZ-RM-M550-09",
+      "order_quantity": 35
+    },
+    {
+      "item": 10,
+      "material": "MZ-RM-M550-10",
+      "order_quantity": 35
+    }
+  ]
+}
+--------------------------------------------------
+You: Which supplier was issued PO 4500000018?
+
+[AI Agent] Intent: Check PO Status -> Calling `get_po_status('4500000018')`
+{
+  "po_number": "4500000018",
+  "supplier": "USSU-VSF07",
+  "doc_date": "2017-08-10 00:00:00",
+  "total_items": 10,
+  "total_ordered_qty": 748,
+  "status": "active"
+}
+--------------------------------------------------
+You: Show all purchase orders for supplier USSU-VSF90
+
+[AI Agent] I couldn't match a PO number or supplier from your question in `pos.json`.
+Try asking like: 'What is the status of PO 4500000004?'
+--------------------------------------------------
+You: Show all purchase orders for supplier USSU-VSF01
+
+[AI Agent] I couldn't match a PO number or supplier from your question in `pos.json`.
+Try asking like: 'What is the status of PO 4500000004?'
+--------------------------------------------------
+You: Show all purchase orders for supplier USSU-VSF05
+
+[AI Agent] Intent: Get POs by Supplier -> Calling `get_pos_by_supplier('USSU-VSF05')`
+{
+  "supplier": "USSU-VSF05",
+  "purchase_orders": [
+    "4500000004",
+    "4500000099",
+    "4500000077",
+    "4500000089",
+    "4500000016",
+    "4500000045",
+    "4500000106"
+  ],
+  "total_pos": 7
+}
+--------------------------------------------------
+You: Can you check the summary of purchase order 4500000045?
+
+[AI Agent] Intent: Check PO Status -> Calling `get_po_status('4500000045')`
+{
+  "po_number": "4500000045",
+  "supplier": "USSU-VSF05",
+  "doc_date": "10/18/2017",
+  "total_items": 10,
+  "total_ordered_qty": 341,
+  "status": "active"
+}
+--------------------------------------------------
+You: What is the status of PO 4500000019?
+
+[AI Agent] I couldn't match a PO number or supplier from your question in `pos.json`.
+Try asking like: 'What is the status of PO 4500000004?'
+--------------------------------------------------
+You: List me the PO with doc date 2017-08-10
+
+[AI Agent] I couldn't match a PO number or supplier from your question in `pos.json`.
+Try asking like: 'What is the status of PO 4500000004?'
