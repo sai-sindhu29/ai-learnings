@@ -1,0 +1,60 @@
+                  USER
+                   |
+                   v
+             CLAUDE API
+                   |
+                   v
+              AGENT LOOP
+                   |
+          Select appropriate tool
+                   |
+       +-----------+-----------+
+       |           |           |
+       v           v           v
+ get_po_status  find_late_pos  get_pos_by_supplier
+       |           |           |
+       +-----------+-----------+
+                   |
+                   v
+              TOOL RESULT
+                   |
+                   v
+              CLAUDE API
+                   |
+             Need another tool?
+                   |
+              +----+----+
+              |         |
+             YES        NO
+              |         |
+              v         v
+          AGENT LOOP   FINISHED
+              |
+              v
+          send_email
+              |
+              v
+        EMAIL DRAFT
+              |
+              v
+       HUMAN APPROVAL
+              |
+          +---+---+
+          |       |
+          Y       N
+          |       |
+          v       v
+      SEND EMAIL  REFUSED
+          |       |
+          +---+---+
+              |
+              v
+          audit.jsonl
+              |
+              v
+       CONTINUE OR STOP
+              |
+        MAX 10 STEPS
+              |
+              v
+             DONE
