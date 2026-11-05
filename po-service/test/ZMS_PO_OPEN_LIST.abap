@@ -1,0 +1,24 @@
+REPORT zms_po_open_list.
+
+DATA: lv_lifnr TYPE ekko-lifnr,
+      lv_bedat TYPE ekko-bedat.
+
+SELECT-OPTIONS: s_lifnr FOR lv_lifnr,
+                s_bedat FOR lv_bedat.
+
+START-OF-SELECTION.
+  SELECT a~ebeln,
+         a~lifnr,
+         a~bedat,
+         b~ebelp,
+         b~matnr,
+         b~menge
+                   FROM ekko AS a
+                   INNER JOIN ekpo AS b ON b~ebeln = a~ebeln
+                   WHERE a~lifnr IN @s_lifnr
+                   AND a~bedat IN @s_bedat
+                   INTO TABLE @DATA(lt_po).
+  cl_salv_table=>factory(
+  IMPORTING r_salv_table = DATA(lo_alv)
+  CHANGING t_table = lt_po ).
+  lo_alv->display( ).
