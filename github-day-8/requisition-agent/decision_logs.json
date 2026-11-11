@@ -1,0 +1,32 @@
+[
+    {
+        "requisition_id": "PR1",
+        "supplier_status": "good",
+        "amount": 450000,
+        "decision_reason": "Supplier is approved and amount is within threshold"
+    },
+    {
+        "requisition_id": "PR2",
+        "supplier_status": "good",
+        "amount": 120000,
+        "decision_reason": "Supplier is approved and amount is within threshold"
+    },
+    {
+        "requisition_id": "PR3",
+        "supplier_status": "good",
+        "amount": 98000,
+        "decision_reason": "Supplier is approved and amount is within threshold"
+    },
+    {
+        "requisition_id": "PR4",
+        "supplier_status": "new",
+        "amount": 5600000,
+        "decision_reason": "Amount exceeds \u20b925 lakh approval threshold"
+    },
+    {
+        "requisition_id": "PR5",
+        "supplier_status": "good",
+        "amount": 3200000,
+        "decision_reason": "Amount exceeds \u20b925 lakh approval threshold"
+    }
+]

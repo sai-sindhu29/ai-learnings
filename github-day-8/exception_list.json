@@ -1,0 +1,11 @@
+[
+  {
+    "id": "PR4",
+    "supplier": "New Vendor Co",
+    "amount": 5600000,
+    "status": "EXCEPTION",
+    "reasons": [
+      "supplier status is 'new' (required: 'good')"
+    ]
+  }
+]

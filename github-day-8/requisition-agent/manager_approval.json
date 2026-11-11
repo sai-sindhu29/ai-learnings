@@ -1,0 +1,16 @@
+[
+    {
+        "requisition_id": "PR4",
+        "supplier": "New Vendor Co",
+        "amount": 5600000,
+        "status": "PENDING_MANAGER_APPROVAL",
+        "reason": "Amount exceeds \u20b925 lakh approval threshold"
+    },
+    {
+        "requisition_id": "PR5",
+        "supplier": "Sharma Steels",
+        "amount": 3200000,
+        "status": "PENDING_MANAGER_APPROVAL",
+        "reason": "Amount exceeds \u20b925 lakh approval threshold"
+    }
+]

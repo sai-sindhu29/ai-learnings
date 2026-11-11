@@ -1,0 +1,59 @@
+{
+  "task": "Capstone 2 - Invoice Validation",
+  "generated_at_utc": "2026-11-11T09:38:01+00:00",
+  "data_assumption": "The source contains purchase requisitions, not actual invoices. Each requisition is used as a sample invoice-validation record.",
+  "source_files": {
+    "requisitions": "requisition-agent/requisitions.json",
+    "suppliers": "requisition-agent/suppliers.csv"
+  },
+  "rules": [
+    "R1 required fields present: id, supplier, amount",
+    "R2 supplier exists in suppliers.csv",
+    "R3 supplier status == 'good'",
+    "R4 amount is numeric and > 0",
+    "R5 duplicate invoice_id (only when an invoice identifier field exists)"
+  ],
+  "duplicate_invoice_check": "NOT_APPLICABLE: source records have no invoice identifier field",
+  "total_records": 5,
+  "clean_count": 4,
+  "exception_count": 1,
+  "clean_ids": [
+    "PR1",
+    "PR2",
+    "PR3",
+    "PR5"
+  ],
+  "exception_ids": [
+    "PR4"
+  ],
+  "results": [
+    {
+      "id": "PR1",
+      "status": "CLEAN",
+      "reasons": []
+    },
+    {
+      "id": "PR2",
+      "status": "CLEAN",
+      "reasons": []
+    },
+    {
+      "id": "PR3",
+      "status": "CLEAN",
+      "reasons": []
+    },
+    {
+      "id": "PR4",
+      "status": "EXCEPTION",
+      "reasons": [
+        "supplier status is 'new' (required: 'good')"
+      ]
+    },
+    {
+      "id": "PR5",
+      "status": "CLEAN",
+      "reasons": []
+    }
+  ],
+  "sap_posting": "none - no SAP invoices or purchase orders were created"
+}

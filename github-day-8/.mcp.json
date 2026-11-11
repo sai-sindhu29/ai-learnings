@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "invoice-validator": {
+      "type": "stdio",
+      "command": "python3",
+      "args": [
+        "/home/user/claude-projects/github-day-8/invoice_validator.py"
+      ],
+      "env": {}
+    }
+  }
+}
