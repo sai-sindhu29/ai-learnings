@@ -1,0 +1,222 @@
+[
+  {
+    "invoice_id": "INV001",
+    "predicted_label": "CLEAN",
+    "rule_results": {
+      "pr_exists": true,
+      "supplier_identity": true,
+      "supplier_active": true,
+      "amount_numeric_positive": true,
+      "amount_below_approval_threshold": true
+    }
+  },
+  {
+    "invoice_id": "INV002",
+    "predicted_label": "CLEAN",
+    "rule_results": {
+      "pr_exists": true,
+      "supplier_identity": true,
+      "supplier_active": true,
+      "amount_numeric_positive": true,
+      "amount_below_approval_threshold": true
+    }
+  },
+  {
+    "invoice_id": "INV003",
+    "predicted_label": "CLEAN",
+    "rule_results": {
+      "pr_exists": true,
+      "supplier_identity": true,
+      "supplier_active": true,
+      "amount_numeric_positive": true,
+      "amount_below_approval_threshold": true
+    }
+  },
+  {
+    "invoice_id": "INV004",
+    "predicted_label": "EXCEPTION",
+    "rule_results": {
+      "pr_exists": true,
+      "supplier_identity": true,
+      "supplier_active": false,
+      "amount_numeric_positive": true,
+      "amount_below_approval_threshold": false
+    }
+  },
+  {
+    "invoice_id": "INV005",
+    "predicted_label": "EXCEPTION",
+    "rule_results": {
+      "pr_exists": true,
+      "supplier_identity": true,
+      "supplier_active": true,
+      "amount_numeric_positive": true,
+      "amount_below_approval_threshold": false
+    }
+  },
+  {
+    "invoice_id": "INV006",
+    "predicted_label": "EXCEPTION",
+    "rule_results": {
+      "pr_exists": true,
+      "supplier_identity": false,
+      "supplier_active": false,
+      "amount_numeric_positive": true,
+      "amount_below_approval_threshold": true
+    }
+  },
+  {
+    "invoice_id": "INV007",
+    "predicted_label": "CLEAN",
+    "rule_results": {
+      "pr_exists": true,
+      "supplier_identity": true,
+      "supplier_active": true,
+      "amount_numeric_positive": true,
+      "amount_below_approval_threshold": true
+    }
+  },
+  {
+    "invoice_id": "INV008",
+    "predicted_label": "EXCEPTION",
+    "rule_results": {
+      "pr_exists": true,
+      "supplier_identity": true,
+      "supplier_active": true,
+      "amount_numeric_positive": false,
+      "amount_below_approval_threshold": true
+    }
+  },
+  {
+    "invoice_id": "INV009",
+    "predicted_label": "EXCEPTION",
+    "rule_results": {
+      "pr_exists": true,
+      "supplier_identity": true,
+      "supplier_active": true,
+      "amount_numeric_positive": false,
+      "amount_below_approval_threshold": true
+    }
+  },
+  {
+    "invoice_id": "INV010",
+    "predicted_label": "CLEAN",
+    "rule_results": {
+      "pr_exists": true,
+      "supplier_identity": true,
+      "supplier_active": true,
+      "amount_numeric_positive": true,
+      "amount_below_approval_threshold": true
+    }
+  },
+  {
+    "invoice_id": "INV011",
+    "predicted_label": "EXCEPTION",
+    "rule_results": {
+      "pr_exists": false,
+      "supplier_identity": false,
+      "supplier_active": true,
+      "amount_numeric_positive": true,
+      "amount_below_approval_threshold": true
+    }
+  },
+  {
+    "invoice_id": "INV012",
+    "predicted_label": "CLEAN",
+    "rule_results": {
+      "pr_exists": true,
+      "supplier_identity": true,
+      "supplier_active": true,
+      "amount_numeric_positive": true,
+      "amount_below_approval_threshold": true
+    }
+  },
+  {
+    "invoice_id": "INV013",
+    "predicted_label": "CLEAN",
+    "rule_results": {
+      "pr_exists": true,
+      "supplier_identity": true,
+      "supplier_active": true,
+      "amount_numeric_positive": true,
+      "amount_below_approval_threshold": true
+    }
+  },
+  {
+    "invoice_id": "INV014",
+    "predicted_label": "CLEAN",
+    "rule_results": {
+      "pr_exists": true,
+      "supplier_identity": true,
+      "supplier_active": true,
+      "amount_numeric_positive": true,
+      "amount_below_approval_threshold": true
+    }
+  },
+  {
+    "invoice_id": "INV015",
+    "predicted_label": "CLEAN",
+    "rule_results": {
+      "pr_exists": true,
+      "supplier_identity": true,
+      "supplier_active": true,
+      "amount_numeric_positive": true,
+      "amount_below_approval_threshold": true
+    }
+  },
+  {
+    "invoice_id": "INV016",
+    "predicted_label": "EXCEPTION",
+    "rule_results": {
+      "pr_exists": true,
+      "supplier_identity": true,
+      "supplier_active": false,
+      "amount_numeric_positive": true,
+      "amount_below_approval_threshold": false
+    }
+  },
+  {
+    "invoice_id": "INV017",
+    "predicted_label": "EXCEPTION",
+    "rule_results": {
+      "pr_exists": true,
+      "supplier_identity": true,
+      "supplier_active": true,
+      "amount_numeric_positive": true,
+      "amount_below_approval_threshold": false
+    }
+  },
+  {
+    "invoice_id": "INV018",
+    "predicted_label": "EXCEPTION",
+    "rule_results": {
+      "pr_exists": true,
+      "supplier_identity": false,
+      "supplier_active": false,
+      "amount_numeric_positive": true,
+      "amount_below_approval_threshold": true
+    }
+  },
+  {
+    "invoice_id": "INV019",
+    "predicted_label": "CLEAN",
+    "rule_results": {
+      "pr_exists": true,
+      "supplier_identity": true,
+      "supplier_active": true,
+      "amount_numeric_positive": true,
+      "amount_below_approval_threshold": true
+    }
+  },
+  {
+    "invoice_id": "INV020",
+    "predicted_label": "CLEAN",
+    "rule_results": {
+      "pr_exists": true,
+      "supplier_identity": true,
+      "supplier_active": true,
+      "amount_numeric_positive": true,
+      "amount_below_approval_threshold": true
+    }
+  }
+]
