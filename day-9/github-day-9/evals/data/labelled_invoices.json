@@ -1,0 +1,142 @@
+[
+  {
+    "invoice_id": "INV001",
+    "pr_id": "PR1",
+    "supplier": "Sharma Steels",
+    "amount": 450000,
+    "expected_label": "CLEAN"
+  },
+  {
+    "invoice_id": "INV002",
+    "pr_id": "PR2",
+    "supplier": "Vizag Paints",
+    "amount": 120000,
+    "expected_label": "CLEAN"
+  },
+  {
+    "invoice_id": "INV003",
+    "pr_id": "PR3",
+    "supplier": "Guntur Cables",
+    "amount": 98000,
+    "expected_label": "CLEAN"
+  },
+  {
+    "invoice_id": "INV004",
+    "pr_id": "PR4",
+    "supplier": "New Vendor Co",
+    "amount": 5600000,
+    "expected_label": "EXCEPTION"
+  },
+  {
+    "invoice_id": "INV005",
+    "pr_id": "PR5",
+    "supplier": "Sharma Steels",
+    "amount": 3200000,
+    "expected_label": "EXCEPTION"
+  },
+  {
+    "invoice_id": "INV006",
+    "pr_id": "PR1",
+    "supplier": "Wrong Vendor",
+    "amount": 450000,
+    "expected_label": "EXCEPTION"
+  },
+  {
+    "invoice_id": "INV007",
+    "pr_id": "PR2",
+    "supplier": "Vizag Paints",
+    "amount": 150000,
+    "expected_label": "EXCEPTION"
+  },
+  {
+    "invoice_id": "INV008",
+    "pr_id": "PR3",
+    "supplier": "Guntur Cables",
+    "amount": -5000,
+    "expected_label": "EXCEPTION"
+  },
+  {
+    "invoice_id": "INV009",
+    "pr_id": "PR1",
+    "supplier": "Sharma Steels",
+    "amount": 0,
+    "expected_label": "EXCEPTION"
+  },
+  {
+    "invoice_id": "INV010",
+    "pr_id": "PR2",
+    "supplier": "Vizag Paints",
+    "amount": 120000,
+    "expected_label": "CLEAN"
+  },
+  {
+    "invoice_id": "INV011",
+    "pr_id": "PR999",
+    "supplier": "Sharma Steels",
+    "amount": 450000,
+    "expected_label": "EXCEPTION"
+  },
+  {
+    "invoice_id": "INV012",
+    "pr_id": "PR1",
+    "supplier": "Sharma Steels",
+    "amount": 450000,
+    "expected_label": "CLEAN"
+  },
+  {
+    "invoice_id": "INV013",
+    "pr_id": "PR3",
+    "supplier": "Guntur Cables",
+    "amount": 98000,
+    "expected_label": "CLEAN"
+  },
+  {
+    "invoice_id": "INV014",
+    "pr_id": "PR2",
+    "supplier": "Vizag Paints",
+    "amount": 120001,
+    "expected_label": "EXCEPTION"
+  },
+  {
+    "invoice_id": "INV015",
+    "pr_id": "PR1",
+    "supplier": "Sharma Steels",
+    "amount": 450000,
+    "expected_label": "CLEAN"
+  },
+  {
+    "invoice_id": "INV016",
+    "pr_id": "PR4",
+    "supplier": "New Vendor Co",
+    "amount": 5600000,
+    "expected_label": "EXCEPTION"
+  },
+  {
+    "invoice_id": "INV017",
+    "pr_id": "PR5",
+    "supplier": "Sharma Steels",
+    "amount": 3200000,
+    "expected_label": "EXCEPTION"
+  },
+  {
+    "invoice_id": "INV018",
+    "pr_id": "PR2",
+    "supplier": "Unknown Supplier",
+    "amount": 120000,
+    "expected_label": "EXCEPTION"
+  },
+  {
+    "invoice_id": "INV019",
+    "pr_id": "PR3",
+    "supplier": "Guntur Cables",
+    "amount": 98000,
+    "expected_label": "CLEAN"
+  },
+  {
+    "invoice_id": "INV020",
+    "pr_id": "PR1",
+    "supplier": "Sharma Steels",
+    "amount": 450000,
+    "expected_label": "CLEAN"
+  }
+]

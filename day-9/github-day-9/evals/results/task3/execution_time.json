@@ -1,0 +1,33 @@
+{
+  "measured": true,
+  "method": "time.perf_counter_ns around the rule evaluation in this Python process",
+  "scope": "Rule-based validation only; no model is invoked",
+  "timestamp_utc": "2026-11-12T08:26:02.171520+00:00",
+  "total_run_ms": 0.213356,
+  "reference_load_ms": 0.135784,
+  "per_invoice_ms": {
+    "INV001": 0.01072,
+    "INV002": 0.0056,
+    "INV003": 0.00665,
+    "INV004": 0.003361,
+    "INV005": 0.00244,
+    "INV006": 0.00237,
+    "INV007": 0.00238,
+    "INV008": 0.00215,
+    "INV009": 0.00539,
+    "INV010": 0.0026,
+    "INV011": 0.00212,
+    "INV012": 0.00214,
+    "INV013": 0.00212,
+    "INV014": 0.00199,
+    "INV015": 0.00191,
+    "INV016": 0.00207,
+    "INV017": 0.00199,
+    "INV018": 0.002021,
+    "INV019": 0.00196,
+    "INV020": 0.00458
+  },
+  "mean_per_invoice_ms": 0.003328,
+  "python_version": "3.13.1",
+  "platform": "Linux-6.12.95-cloud-amd64-x86_64-with-glibc2.41"
+}
