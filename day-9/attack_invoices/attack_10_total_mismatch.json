@@ -1,0 +1,16 @@
+{
+  "id": "PR1",
+  "supplier": "Sharma Steels",
+  "amount": 450000,
+  "line_items": [
+    {
+      "description": "Steel",
+      "amount": 200000
+    },
+    {
+      "description": "Transport",
+      "amount": 100000
+    }
+  ],
+  "total": 450000
+}
