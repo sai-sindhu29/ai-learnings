@@ -1,0 +1,146 @@
+{
+  "dataset": "evals/data/labelled_invoices.json",
+  "dataset_sha256_before_run": "c62113972bd6a471457d49df0601f5170c7998b0a4be63ca6a69b5a1e9533b31",
+  "dataset_sha256_after_run": "c62113972bd6a471457d49df0601f5170c7998b0a4be63ca6a69b5a1e9533b31",
+  "dataset_unchanged": true,
+  "total_invoices": 20,
+  "correct": 18,
+  "incorrect": 2,
+  "accuracy": 0.9,
+  "exception_class": {
+    "precision": 1.0,
+    "recall": 0.8182
+  },
+  "confusion_matrix": {
+    "true_exception": 9,
+    "false_exception": 0,
+    "true_clean": 9,
+    "false_clean": 2
+  },
+  "mismatched_invoice_ids": [
+    "INV007",
+    "INV014"
+  ],
+  "per_invoice": [
+    {
+      "invoice_id": "INV001",
+      "expected_label": "CLEAN",
+      "predicted_label": "CLEAN",
+      "correct": true
+    },
+    {
+      "invoice_id": "INV002",
+      "expected_label": "CLEAN",
+      "predicted_label": "CLEAN",
+      "correct": true
+    },
+    {
+      "invoice_id": "INV003",
+      "expected_label": "CLEAN",
+      "predicted_label": "CLEAN",
+      "correct": true
+    },
+    {
+      "invoice_id": "INV004",
+      "expected_label": "EXCEPTION",
+      "predicted_label": "EXCEPTION",
+      "correct": true
+    },
+    {
+      "invoice_id": "INV005",
+      "expected_label": "EXCEPTION",
+      "predicted_label": "EXCEPTION",
+      "correct": true
+    },
+    {
+      "invoice_id": "INV006",
+      "expected_label": "EXCEPTION",
+      "predicted_label": "EXCEPTION",
+      "correct": true
+    },
+    {
+      "invoice_id": "INV007",
+      "expected_label": "EXCEPTION",
+      "predicted_label": "CLEAN",
+      "correct": false
+    },
+    {
+      "invoice_id": "INV008",
+      "expected_label": "EXCEPTION",
+      "predicted_label": "EXCEPTION",
+      "correct": true
+    },
+    {
+      "invoice_id": "INV009",
+      "expected_label": "EXCEPTION",
+      "predicted_label": "EXCEPTION",
+      "correct": true
+    },
+    {
+      "invoice_id": "INV010",
+      "expected_label": "CLEAN",
+      "predicted_label": "CLEAN",
+      "correct": true
+    },
+    {
+      "invoice_id": "INV011",
+      "expected_label": "EXCEPTION",
+      "predicted_label": "EXCEPTION",
+      "correct": true
+    },
+    {
+      "invoice_id": "INV012",
+      "expected_label": "CLEAN",
+      "predicted_label": "CLEAN",
+      "correct": true
+    },
+    {
+      "invoice_id": "INV013",
+      "expected_label": "CLEAN",
+      "predicted_label": "CLEAN",
+      "correct": true
+    },
+    {
+      "invoice_id": "INV014",
+      "expected_label": "EXCEPTION",
+      "predicted_label": "CLEAN",
+      "correct": false
+    },
+    {
+      "invoice_id": "INV015",
+      "expected_label": "CLEAN",
+      "predicted_label": "CLEAN",
+      "correct": true
+    },
+    {
+      "invoice_id": "INV016",
+      "expected_label": "EXCEPTION",
+      "predicted_label": "EXCEPTION",
+      "correct": true
+    },
+    {
+      "invoice_id": "INV017",
+      "expected_label": "EXCEPTION",
+      "predicted_label": "EXCEPTION",
+      "correct": true
+    },
+    {
+      "invoice_id": "INV018",
+      "expected_label": "EXCEPTION",
+      "predicted_label": "EXCEPTION",
+      "correct": true
+    },
+    {
+      "invoice_id": "INV019",
+      "expected_label": "CLEAN",
+      "predicted_label": "CLEAN",
+      "correct": true
+    },
+    {
+      "invoice_id": "INV020",
+      "expected_label": "CLEAN",
+      "predicted_label": "CLEAN",
+      "correct": true
+    }
+  ]
+}

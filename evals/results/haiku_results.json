@@ -1,0 +1,153 @@
+{
+  "model": "claude-haiku-5-5",
+  "summary": {
+    "total_invoices_processed": 20,
+    "correct_predictions": 18,
+    "incorrect_predictions": 2,
+    "accuracy_percent": 90.0,
+    "execution_time_seconds": 0.00029,
+    "model_cost": "not reliably measurable (deterministic rule-based run; no LLM calls)"
+  },
+  "results": [
+    {
+      "invoice_id": "INV001",
+      "predicted_label": "CLEAN",
+      "expected_label": "CLEAN",
+      "correct": true,
+      "exception_reason": null
+    },
+    {
+      "invoice_id": "INV002",
+      "predicted_label": "CLEAN",
+      "expected_label": "CLEAN",
+      "correct": true,
+      "exception_reason": null
+    },
+    {
+      "invoice_id": "INV003",
+      "predicted_label": "CLEAN",
+      "expected_label": "CLEAN",
+      "correct": true,
+      "exception_reason": null
+    },
+    {
+      "invoice_id": "INV004",
+      "predicted_label": "EXCEPTION",
+      "expected_label": "EXCEPTION",
+      "correct": true,
+      "exception_reason": "Supplier 'New Vendor Co' status is 'new' (not active/approved); Amount 5600000 exceeds INR 25,00,000; manager approval required"
+    },
+    {
+      "invoice_id": "INV005",
+      "predicted_label": "EXCEPTION",
+      "expected_label": "EXCEPTION",
+      "correct": true,
+      "exception_reason": "Amount 3200000 exceeds INR 25,00,000; manager approval required"
+    },
+    {
+      "invoice_id": "INV006",
+      "predicted_label": "EXCEPTION",
+      "expected_label": "EXCEPTION",
+      "correct": true,
+      "exception_reason": "Supplier mismatch: invoice 'Wrong Vendor' vs PR supplier 'Sharma Steels'; Supplier 'Wrong Vendor' not found in suppliers.csv"
+    },
+    {
+      "invoice_id": "INV007",
+      "predicted_label": "CLEAN",
+      "expected_label": "EXCEPTION",
+      "correct": false,
+      "exception_reason": null
+    },
+    {
+      "invoice_id": "INV008",
+      "predicted_label": "EXCEPTION",
+      "expected_label": "EXCEPTION",
+      "correct": true,
+      "exception_reason": "Amount -5000 is not greater than zero"
+    },
+    {
+      "invoice_id": "INV009",
+      "predicted_label": "EXCEPTION",
+      "expected_label": "EXCEPTION",
+      "correct": true,
+      "exception_reason": "Amount 0 is not greater than zero"
+    },
+    {
+      "invoice_id": "INV010",
+      "predicted_label": "CLEAN",
+      "expected_label": "CLEAN",
+      "correct": true,
+      "exception_reason": null
+    },
+    {
+      "invoice_id": "INV011",
+      "predicted_label": "EXCEPTION",
+      "expected_label": "EXCEPTION",
+      "correct": true,
+      "exception_reason": "PR 'PR999' not found in requisitions.json"
+    },
+    {
+      "invoice_id": "INV012",
+      "predicted_label": "CLEAN",
+      "expected_label": "CLEAN",
+      "correct": true,
+      "exception_reason": null
+    },
+    {
+      "invoice_id": "INV013",
+      "predicted_label": "CLEAN",
+      "expected_label": "CLEAN",
+      "correct": true,
+      "exception_reason": null
+    },
+    {
+      "invoice_id": "INV014",
+      "predicted_label": "CLEAN",
+      "expected_label": "EXCEPTION",
+      "correct": false,
+      "exception_reason": null
+    },
+    {
+      "invoice_id": "INV015",
+      "predicted_label": "CLEAN",
+      "expected_label": "CLEAN",
+      "correct": true,
+      "exception_reason": null
+    },
+    {
+      "invoice_id": "INV016",
+      "predicted_label": "EXCEPTION",
+      "expected_label": "EXCEPTION",
+      "correct": true,
+      "exception_reason": "Supplier 'New Vendor Co' status is 'new' (not active/approved); Amount 5600000 exceeds INR 25,00,000; manager approval required"
+    },
+    {
+      "invoice_id": "INV017",
+      "predicted_label": "EXCEPTION",
+      "expected_label": "EXCEPTION",
+      "correct": true,
+      "exception_reason": "Amount 3200000 exceeds INR 25,00,000; manager approval required"
+    },
+    {
+      "invoice_id": "INV018",
+      "predicted_label": "EXCEPTION",
+      "expected_label": "EXCEPTION",
+      "correct": true,
+      "exception_reason": "Supplier mismatch: invoice 'Unknown Supplier' vs PR supplier 'Vizag Paints'; Supplier 'Unknown Supplier' not found in suppliers.csv"
+    },
+    {
+      "invoice_id": "INV019",
+      "predicted_label": "CLEAN",
+      "expected_label": "CLEAN",
+      "correct": true,
+      "exception_reason": null
+    },
+    {
+      "invoice_id": "INV020",
+      "predicted_label": "CLEAN",
+      "expected_label": "CLEAN",
+      "correct": true,
+      "exception_reason": null
+    }
+  ]
+}
