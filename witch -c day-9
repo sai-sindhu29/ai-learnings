@@ -1,0 +1,98 @@
+[33m782fef2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Add Day 9 invoice security and evaluation
+ __pycache__/secure_invoice_validator.cpython-313.pyc              | Bin [31m0[m -> [32m7922[m bytes
+ attack_invoices/attack_01_prompt_injection.json                   |   6 [32m+++[m
+ attack_invoices/attack_02_amount_mismatch.json                    |   6 [32m+++[m
+ attack_invoices/attack_03_invalid_pr.json                         |   5 [32m++[m
+ attack_invoices/attack_04_duplicate.json                          |   6 [32m+++[m
+ attack_invoices/attack_05_huge_amount.json                        |   5 [32m++[m
+ attack_invoices/attack_06_invalid_dates.json                      |   7 [32m+++[m
+ attack_invoices/attack_07_invalid_gstin.json                      |   6 [32m+++[m
+ attack_invoices/attack_08_vendor_mismatch.json                    |   6 [32m+++[m
+ attack_invoices/attack_09_empty_invoice.json                      |   0
+ attack_invoices/attack_10_total_mismatch.json                     |  16 [32m+++++++[m
+ audit_log.json                                                    |  88 [32m++++++++++++++++++++++++++++++++++[m
+ day-9/__pycache__/secure_invoice_validator.cpython-313.pyc        | Bin [31m0[m -> [32m7922[m bytes
+ day-9/attack_invoices/attack_01_prompt_injection.json             |   6 [32m+++[m
+ day-9/attack_invoices/attack_02_amount_mismatch.json              |   6 [32m+++[m
+ day-9/attack_invoices/attack_03_invalid_pr.json                   |   5 [32m++[m
+ day-9/attack_invoices/attack_04_duplicate.json                    |   6 [32m+++[m
+ day-9/attack_invoices/attack_05_huge_amount.json                  |   5 [32m++[m
+ day-9/attack_invoices/attack_06_invalid_dates.json                |   7 [32m+++[m
+ day-9/attack_invoices/attack_07_invalid_gstin.json                |   6 [32m+++[m
+ day-9/attack_invoices/attack_08_vendor_mismatch.json              |   6 [32m+++[m
+ day-9/attack_invoices/attack_09_empty_invoice.json                |   0
+ day-9/attack_invoices/attack_10_total_mismatch.json               |  16 [32m+++++++[m
+ day-9/audit_log.json                                              |  88 [32m++++++++++++++++++++++++++++++++++[m
+ day-9/evals/data/labelled_invoices.json                           | 142 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ day-9/evals/proof/labelled_invoices.json                          | 142 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ day-9/evals/results/comparison_table.md                           |  48 [32m+++++++++++++++++++[m
+ day-9/evals/results/haiku_results.json                            | 153 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ day-9/evals/results/sonnet_results.json                           | 153 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ day-9/evals/results/task3/correctness.json                        | 146 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ day-9/evals/results/task3/execution_time.json                     |  33 [32m+++++++++++++[m
+ day-9/evals/results/task3/expected_labels.json                    |  82 [32m++++++++++++++++++++++++++++++++[m
+ day-9/evals/results/task3/model_cost.json                         |  10 [32m++++[m
+ day-9/evals/results/task3/predictions.json                        | 222 [32m++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ day-9/evals/run_eval.sh                                           |  16 [32m+++++++[m
+ day-9/evals/task3_eval.py                                         | 256 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ day-9/exception_list.json                                         |  82 [32m++++++++++++++++++++++++++++++++[m
+ day-9/gaps.md                                                     |  95 [32m+++++++++++++++++++++++++++++++++++++[m
+ day-9/lab log.md                                                  |  63 [32m+++++++++++++++++++++++++[m
+ day-9/proof/hardest_attack.md                                     |   7 [32m+++[m
+ day-9/proof/test_results.txt                                      |  18 [32m+++++++[m
+ day-9/secure_invoice_validator.py                                 | 284 [32m++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ day-9/tests/__pycache__/test_attacks.cpython-313-pytest-9.2.0.pyc | Bin [31m0[m -> [32m11760[m bytes
+ day-9/tests/test_attacks.py                                       |  66 [32m++++++++++++++++++++++++++[m
+ day9/__pycache__/secure_invoice_validator.cpython-313.pyc         | Bin [31m0[m -> [32m7922[m bytes
+ day9/attack_invoices/attack_01_prompt_injection.json              |   6 [32m+++[m
+ day9/attack_invoices/attack_02_amount_mismatch.json               |   6 [32m+++[m
+ day9/attack_invoices/attack_03_invalid_pr.json                    |   5 [32m++[m
+ day9/attack_invoices/attack_04_duplicate.json                     |   6 [32m+++[m
+ day9/attack_invoices/attack_05_huge_amount.json                   |   5 [32m++[m
+ day9/attack_invoices/attack_06_invalid_dates.json                 |   7 [32m+++[m
+ day9/attack_invoices/attack_07_invalid_gstin.json                 |   6 [32m+++[m
+ day9/attack_invoices/attack_08_vendor_mismatch.json               |   6 [32m+++[m
+ day9/attack_invoices/attack_09_empty_invoice.json                 |   0
+ day9/attack_invoices/attack_10_total_mismatch.json                |  16 [32m+++++++[m
+ day9/audit_log.json                                               |  88 [32m++++++++++++++++++++++++++++++++++[m
+ day9/evals/data/labelled_invoices.json                            | 142 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ day9/evals/proof/labelled_invoices.json                           | 142 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ day9/evals/results/comparison_table.md                            |  48 [32m+++++++++++++++++++[m
+ day9/evals/results/haiku_results.json                             | 153 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ day9/evals/results/sonnet_results.json                            | 153 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ day9/evals/results/task3/correctness.json                         | 146 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ day9/evals/results/task3/execution_time.json                      |  33 [32m+++++++++++++[m
+ day9/evals/results/task3/expected_labels.json                     |  82 [32m++++++++++++++++++++++++++++++++[m
+ day9/evals/results/task3/model_cost.json                          |  10 [32m++++[m
+ day9/evals/results/task3/predictions.json                         | 222 [32m++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ day9/evals/run_eval.sh                                            |  16 [32m+++++++[m
+ day9/evals/task3_eval.py                                          | 256 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ day9/exception_list.json                                          |  82 [32m++++++++++++++++++++++++++++++++[m
+ day9/gaps.md                                                      |  95 [32m+++++++++++++++++++++++++++++++++++++[m
+ day9/lab log.md                                                   |  63 [32m+++++++++++++++++++++++++[m
+ day9/proof/hardest_attack.md                                      |   7 [32m+++[m
+ day9/proof/test_results.txt                                       |  18 [32m+++++++[m
+ day9/secure_invoice_validator.py                                  | 284 [32m++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ day9/tests/__pycache__/test_attacks.cpython-313-pytest-9.2.0.pyc  | Bin [31m0[m -> [32m11760[m bytes
+ day9/tests/test_attacks.py                                        |  66 [32m++++++++++++++++++++++++++[m
+ evals/data/labelled_invoices.json                                 | 142 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ evals/proof/labelled_invoices.json                                | 142 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ evals/results/comparison_table.md                                 |  48 [32m+++++++++++++++++++[m
+ evals/results/haiku_results.json                                  | 153 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ evals/results/sonnet_results.json                                 | 153 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ evals/results/task3/correctness.json                              | 146 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ evals/results/task3/execution_time.json                           |  33 [32m+++++++++++++[m
+ evals/results/task3/expected_labels.json                          |  82 [32m++++++++++++++++++++++++++++++++[m
+ evals/results/task3/model_cost.json                               |  10 [32m++++[m
+ evals/results/task3/predictions.json                              | 222 [32m++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ evals/run_eval.sh                                                 |  16 [32m+++++++[m
+ evals/task3_eval.py                                               | 256 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ exception_list.json                                               |  82 [32m++++++++++++++++++++++++++++++++[m
+ gaps.md                                                           |  95 [32m+++++++++++++++++++++++++++++++++++++[m
+ lab log.md                                                        |  63 [32m+++++++++++++++++++++++++[m
+ proof/hardest_attack.md                                           |   7 [32m+++[m
+ proof/test_results.txt                                            |  18 [32m+++++++[m
+ secure_invoice_validator.py                                       | 284 [32m++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ tests/__pycache__/test_attacks.cpython-313-pytest-9.2.0.pyc       | Bin [31m0[m -> [32m11760[m bytes
+ tests/test_attacks.py                                             |  66 [32m++++++++++++++++++++++++++[m
+ 96 files changed, 6507 insertions(+)
